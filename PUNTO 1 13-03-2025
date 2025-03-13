@@ -1,0 +1,25 @@
+Algoritmo sin_titulo
+	
+		Definir N, i, mayor, segundoMayor Como Entero
+		Definir numeros Como Entero
+		
+		Escribir "Ingrese la cantidad de números:"
+		Leer N
+		
+		Dimension numeros[N]  
+		
+		Escribir "Ingrese los ", N, " números:"
+		Para i <- 1 Hasta N Hacer
+			Leer numeros[i]
+		FinPara
+		mayor <- numeros[1]
+		segundoMayor <- numeros[1]
+		
+	    Para i <- 2 Hasta N Hacer
+		FinPara
+		
+			
+		Escribir "El número mayor es: ", mayor
+			Escribir "El segundo número mayor es: ", segundoMayor
+FinAlgoritmo
+
