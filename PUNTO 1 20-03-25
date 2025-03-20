@@ -1,0 +1,15 @@
+Algoritmo sin_titulo
+
+		Definir n, suma, num Como Entero
+		suma <- 0
+		Escribir "Ingrese la cantidad de números:"
+		Leer n
+		
+		Para i <- 1 Hasta n Hacer
+			Escribir "Ingrese un número:"
+			Leer num
+			suma <- suma + num
+		FinPara
+		
+		Escribir "La suma de los números es: ", suma
+FinAlgoritmo
