@@ -1,0 +1,33 @@
+Algoritmo sin_titulo
+	
+	Definir temp, suma, maxtemp, mintemp , prom  Como Real
+     Escribir "Ingrese las temperaturas de la semana:"
+		Para i <- 1 Hasta 7 Hacer
+		
+		FinPara
+		
+	  suma <- 0
+    maxtemp <-  -9999
+    mintemp <-  9999
+    
+    Para i <- 1 Hasta 7 Hacer 
+		escribir "Temperatura del día " i, ": "
+		leer temp
+        Si temp > maxTemp Entonces
+			maxTemp <- temp 
+		Fin Si 
+		Si temp < minTemp Entonces
+			minTemp <- temp
+		Fin Si 
+		suma = temp + suma  
+	FinPara 
+	 
+    
+    prom <- suma / 7
+    
+    Escribir "Temperatura máxima: ", maxtemp 
+    Escribir "Temperatura mínima: ", mintemp 
+    Escribir "Temperatura promedio: ", prom
+FinAlgoritmo    
+
+
