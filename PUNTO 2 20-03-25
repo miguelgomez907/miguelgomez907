@@ -1,0 +1,30 @@
+Algoritmo RaiPrograma 
+
+		Definir num, rai , residuo, pa, x Como Entero
+		Dimension pares[3]
+		
+		Escribir "Ingrese un número de 5 dígitos:"
+		Leer num
+		
+		Para i <- 3 Hasta 1 Con Paso -1 Hacer
+			pares[i] <- num MOD 100
+			num <- Trunc(num / 100)
+		FinPara
+		
+		rai<- 0
+		residuo <- 0
+		
+		Para i <- 1 Hasta 3 Hacer
+			residuo <- residuo * 100 + pares[i]
+			x <- 0
+			Mientras ((20 * rai + x) * x) <= residuo Hacer
+				x <- x + 1
+			FinMientras
+			x <- x - 1
+			residuo <- residuo - ((20 * rai + x) * x)
+			rai <- rai * 10 + x
+		FinPara
+		
+		Escribir "Raíz = ", rai, " Residuo = ", residuo
+FinAlgoritmo
+
