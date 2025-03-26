@@ -1,0 +1,20 @@
+EJERCICIO #3  
+
+Algoritmo OperacionSegunPrimerNumero 
+	definir num1, num2, num3, resultado como real 
+	escribir " ingrese el primer numero: "
+	leer num1 
+	escribir " ingrese el segundo numero: " 
+	leer num2 
+	escribir " ingrese el terceer numero: " 
+	leer num3 
+	
+	si num1 < 0 entonces 
+		resultado <- num1 * num2 * num3 
+		escribir " el primer numero es negativo. el proiducto de los tres numero es: ", resultado
+		
+	sino 
+		resultado <- num1 + num2 + num3 
+		escribir " el primer no es negativo. la suma de los de los tres nuemros es : " , resultado 
+	FinSi
+FinAlgoritmo
