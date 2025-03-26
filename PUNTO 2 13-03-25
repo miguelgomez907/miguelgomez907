@@ -1,0 +1,21 @@
+ALGORITMO #2
+ 
+Algoritmo  CalcularCostoPlato
+​definir precios Como Entero
+​Escribir "Ingrese la cantidad de productos:"
+​​Leer n
+​​Dimension precios[100]
+​​
+​​​Para i = 1 Hasta n Hacer
+​​​​Escribir "Ingrese el precio del producto ", i, ":"
+​​​​Leer precios[i]
+​​​​Si precios[i] >= 0 Entonces
+​​​​​costoTotal <- costoTotal + precios[i]
+​​​​Sino
+​​​​​Escribir "Error: El precio no puede ser negativo. Se considerará 0 para el producto ", i, "."
+​​​​​costoTotal <- costoTotal + 0
+​​​​FinSi
+​​​FinPara
+​​​
+​​​Escribir "El costo total a gastar es: ", costoTotal
+​​FinAlgoritmo
