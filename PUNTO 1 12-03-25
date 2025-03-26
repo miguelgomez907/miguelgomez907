@@ -1,0 +1,22 @@
+ 
+Algoritmo ElevarAlCuadrado
+​definir num como entero
+​Escribir "Ingrese la cantidad de números:"
+   Leer n
+​Dimension num[100]
+   Si n > 0 Entonces
+      Para i = 1 Hasta n Hacer
+​​   Escribir "Ingrese el número ", i, ":"
+​​   leer num[i]
+       
+       FinPara
+       Escribir "Los números elevados al cuadrado son:"
+       Para i = 1 Hasta n Hacer
+           Escribir num[i], " elevar al cuadrado  ", num[i] ^ 2
+​​​
+       FinPara
+   Sino
+       Escribir " La cantidad de números debe ser mayor que 0."
+   FinSi
+ 
+FinAlgoritmo
