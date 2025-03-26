@@ -1,0 +1,20 @@
+EJERCICIO #2 
+Algoritmo Promediodealumno 
+	definir nota1, nota2, nota3 Como real 
+	definir promedio como real
+	escribir " ingrese la primera calificacion : " 
+	leer nota1 
+	escribir " ingrese la segunda calificacion : " 
+	leer nota2 
+	escribir " ingrese la tercera calificacion : "
+	leer nota3 
+	
+	promedio <- ( nota1 + nota2 + nota3 ) / 3 
+	mientras promedio <- 4.0 hacer 
+		escribir " el alumno reprueba con un  promedio de: ", promedio 
+		
+	FinMientras 
+	si promedio >= 4.0 Entonces
+	escribir " el alumno aprueba con un promedio de: ",  promedio  
+	FinSi
+FinAlgoritmo
