@@ -1,0 +1,40 @@
+Algoritmo sin_titulo
+
+		Definir nombre Como Cadena
+		Definir cantidad, precioUnitario, subtotal, descuento, total Como Real
+		
+		
+		Escribir "Ingrese el nombre del cliente: "
+		Leer nombre
+		
+		
+		Escribir "Ingrese la cantidad de llantas a comprar: "
+		Leer cantidad
+		
+		
+		Si cantidad < 12 Entonces
+			precioUnitario <- 250
+			descuento <- 0.20
+		Sino
+			precioUnitario <- 220
+			descuento <- 0.25
+		FinSi
+		
+	
+		subtotal <- cantidad * precioUnitario
+		
+		
+		descuento <- subtotal * descuento
+	
+		total <- subtotal - descuento
+		
+	
+		Escribir "-------------------------------"
+		Escribir "Cliente: ", nombre
+		Escribir "Cantidad de llantas: ", cantidad
+		Escribir "Precio unitario: ", precioUnitario, " cop  "
+		Escribir "Subtotal: ", subtotal, " cop "
+		Escribir "Descuento aplicado: ", descuento, " cop "
+		Escribir "Total a pagar: ", total, " cop  "
+		Escribir "-------------------------------"
+FinAlgoritmo
