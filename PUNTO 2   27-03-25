@@ -1,0 +1,27 @@
+Algoritmo sin_titulo
+	
+		Definir precioMoto, descuentoMartes, descuentoSabado, descuentodomingo  Como Real
+		Definir totalMartes, totalSabado, totaldomingo Como Real
+		
+	
+		Escribir "Ingrese el precio de la moto: "
+		Leer precioMoto
+		
+	
+		descuentoMartes <- 0.12 
+		descuentoSabado <- 0.18
+		descuentodomingo <- 0.25
+		
+		
+		totalMartes <- precioMoto - (precioMoto * descuentoMartes)
+		totalSabado <- precioMoto - (precioMoto * descuentoSabado)
+		totaldomingo  <- precioMoto - (precioMoto * descuentodomingo )
+		
+		
+		Escribir "------------------------------------"
+		Escribir "Precio original de la moto: ", precioMoto, " cop"
+		Escribir "Si la compra el MARTES pagará: ", totalMartes, " cop (12% de descuento)"
+		Escribir "Si la compra el SÁBADO pagará: ", totalSabado, " cop  (18% de descuento)"
+		Escribir "Si la compra un DOMINGO pagará: ", totaldomingo , " cop (25% de descuento)"
+		Escribir "------------------------------------"
+FinAlgoritmo
