@@ -1,0 +1,36 @@
+Algoritmo sin_titulo
+
+		Definir marca Como Cadena
+		Definir precio, descuento, precio_final Como Real
+		
+		Escribir "Ingrese la marca de la motocicleta (Honda, Yamaha, Suzuki u otra):"
+		Leer marca
+		Escribir "Ingrese el precio de la motocicleta:"
+		Leer precio
+		
+		
+		Si marca = "Honda" Entonces
+			finsi 
+			descuento <- precio * 0.05
+		 Si marca = "Yamaha" Entonces
+			FinSi
+			
+			
+			
+				descuento <- precio * 0.08
+			 Si marca = "Suzuki" Entonces
+					descuento <- precio * 0.10
+				Sino
+					descuento <- precio * 0.02
+				Fin Si
+				
+			
+				precio_final <- precio - descuento
+				
+			
+				Escribir "Precio original: $", precio
+				Escribir "Descuento aplicado: $", descuento
+				Escribir "Precio final a pagar: $", precio_final
+				
+FinAlgoritmo
+
