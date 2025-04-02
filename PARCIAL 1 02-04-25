@@ -1,0 +1,27 @@
+Algoritmo sin_titulo
+	
+		
+		Definir N, i Como Entero
+		Definir horas_trabajadas, pago_por_hora, sueldo_semanal, total_pagado Como Real
+		
+		Escribir "Ingrese la cantidad de empleados:"
+		Leer N
+		
+		total_pagado <- 0  
+		
+		Para i <- 1 Hasta N Hacer
+			Escribir "Ingrese las horas trabajadas del empleado ", i, ":"
+			Leer horas_trabajadas
+			
+			Escribir "Ingrese el pago por hora del empleado ", i, ":"
+			Leer pago_por_hora
+			
+			sueldo_semanal <- horas_trabajadas * pago_por_hora
+			Escribir "El sueldo semanal del empleado ", i, " es: ", sueldo_semanal
+			
+			total_pagado <- total_pagado + sueldo_semanal
+		FinPara
+		
+		Escribir "El total pagado por la empresa a todos los empleados es: ", total_pagado
+FinAlgoritmo
+
