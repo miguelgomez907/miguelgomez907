@@ -1,0 +1,11 @@
+# Programa para calcular el precio de venta de un artículo
+nombre_producto = input("Ingrese el nombre del producto: ")
+costo_produccion = float(input("Ingrese el costo de producción del producto: "))
+
+# Calcular el precio de venta
+utilidad = costo_produccion * 1.2  # 120% de utilidad
+impuestos = costo_produccion * 0.15  # 15% de impuestos
+precio_venta = costo_produccion + utilidad + impuestos
+
+# Mostrar el resultado
+print(f"El precio de venta del producto '{nombre_producto}' es: ${precio_venta:.2f}")
