@@ -1,0 +1,7 @@
+import math 
+number = float(input("Introduce un número real: "))
+if number < 0:
+    print("No se puede calcular la raíz cuarta de un número negativo.")
+else:
+    fourth_root = math.sqrt(math.sqrt(number))
+    print(f"La raíz cuarta de {number} es {fourth_root}") 
