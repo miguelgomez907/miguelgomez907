@@ -1,0 +1,72 @@
+def poker(mano):
+    return any([mano.count(c[0]) == 4 for c in mano])
+
+def producto_escalar(v1, v2):
+    return sum(map(lambda a, b: a * b, v1, v2))
+
+def son_ortogonales(v1, v2):
+    return producto_escalar(v1, v2) == 0
+
+def son_paralelos(v1, v2):
+    try:
+        ratios = [a / b for a, b in zip(v1, v2) if b != 0]
+        return all(r == ratios[0] for r in ratios)
+    except ZeroDivisionError:
+        return False
+
+def norma(v):
+    return sum(map(lambda x: x * 2, v)) * 0.5
+
+def clasificar(lista, k):
+    menores, iguales, mayores, multiplos = [], [], [], []
+    for x in lista:
+        if x < k:
+            menores.append(x)
+        elif x == k:
+            iguales.append(x)
+        else:
+            mayores.append(x)
+        if x % k == 0:
+            multiplos.append(x)
+    return menores, iguales, mayores, multiplos
+
+def obtener_vector(mensaje):
+    return list(map(int, input(mensaje).split()))
+
+def obtener_cartas():
+    return [(int(input("Número: ")), input("Palo: ")) for _ in range(5)]
+
+while True:
+    print("\n| Menu | 1. Poker | 2. Producto Escalar | 3. Ortogonales | 4. Paralelos | 5. Norma | 6. Clasificar | 7. Salir")
+    opcion = input("Elige una opción: ")
+
+    if opcion == '1':
+        mano = obtener_cartas()
+        print("Poker:", poker(mano))
+    elif opcion == '2':
+        v1 = obtener_vector("Ingresa vector 1: ")
+        v2 = obtener_vector("Ingresa vector 2: ")
+        print("Producto escalar:", producto_escalar(v1, v2))
+    elif opcion == '3':
+        v1 = obtener_vector("Ingresa vector 1: ")
+        v2 = obtener_vector("Ingresa vector 2: ")
+        print("¿Son ortogonales?:", son_ortogonales(v1, v2))
+    elif opcion == '4':
+        v1 = obtener_vector("Ingresa vector 1: ")
+        v2 = obtener_vector("Ingresa vector 2: ")
+        print("¿Son paralelos?:", son_paralelos(v1, v2))
+    elif opcion == '5':
+        v = obtener_vector("Ingresa el vector: ")
+        print("Norma:", norma(v))
+    elif opcion == '6':
+        lista = list(map(int, input("Ingresa lista de números: ").split()))
+        k = int(input("Valor k: "))
+        menores, iguales, mayores, multiplos = clasificar(lista, k)
+        print("Menores que k:", menores)
+        print("Iguales a k:", iguales)
+        print("Mayores que k:", mayores)
+        print("Múltiplos de k:", multiplos)
+    elif opcion == '7':
+        break
+    else:
+        print("Opción mala, intenta otra vez.")
