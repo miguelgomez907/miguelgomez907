@@ -1,0 +1,88 @@
+EJERCICIO #1 
+
+contraseña1 = "gabo"
+contraseña2=input("ingrese la contraseña: ")
+if contraseña2 == contraseña1:
+    print ("la contraseña ingresada es correcta")
+else:
+    print ("la contraseña ingresada es incorrecta") 
+
+
+EJERCICIO #2 
+
+print ("BIENVENIDO")
+numerador= float(input("ingrese un numero por favor: "))
+denominador= float(input("ingrese el otro numero por favor: "))
+if denominador ==0:
+    print ("ERROR...Ingrese un numero diferente a 0")
+else:
+    resultado = numerador / denominador
+    print ("la division entre ambos numeros es" , resultado) 
+
+
+EJERCICIO #3 
+
+edad = int(input("ingrese su edad: "))
+ingresos= float(input("Digita tus ingresos mensuales: "))
+if edad > 16 and ingresos >= 1000:
+    print("Debe tributar")
+else: 
+    print("no debe tributar") 
+
+
+EJERCICIO #4 
+
+nombre = input("Introduce tu nombre: ")
+sexo = input("Introduce tu sexo (M para mujer, H para hombre): ")
+if (sexo=="M" and nombre<"M")or(sexo == "H" and nombre > "N"):
+    grupo="A"
+else:
+    grupo="B"
+print(f" {nombre}, tu grupo es el {grupo}.")
+
+
+
+EJERCICIO #5 
+
+
+nomCompleto = input("Introduce tu nombre completo: ")
+print("En minúsculas: ", nomCompleto.lower())
+print("En mayúsculas: ", nomCompleto.upper())
+print("Mayuscula la 1era Letra: ", nomCompleto.title()) 
+
+
+
+EJERCICIO #6 
+
+nombre = input("Introduce tu nombre: ")
+nombre = nombre.replace(" ", "")
+cantidad = len(nombre)
+print(nombre.upper(), "tiene", cantidad, "letras") 
+
+
+EJERCICIO #7 
+
+telefono = input("Introduce el número de teléfono con el formato +34-número-extensión: ")
+partes = telefono.split('-')
+if len(partes) == 3:
+    numero_sin_prefijo_ni_extension = partes[1]
+    print("Número sin prefijo ni extensión:", numero_sinprefijo_ni_extension)
+else:
+    print("El formato del número no es correcto. Debe ser: +34-número-extensión") 
+
+
+
+EJERCICIO #8 
+
+frase = input("Introduce lafrase: ")
+fraseInvertida = frase[::-1]
+print("A continuacion la frase invertida...:", fraseInvertida)  
+
+
+EJERCICIO #9 
+
+rase = input("Introduce la frase: ")
+vocal = input("ingresa una vocal: ")
+
+
+print("A continuacion la frase...:", frase + vocal.upper())
