@@ -1,0 +1,50 @@
+saldo = 500000
+contraseña = "24356"
+intentos = 3
+
+while intentos > 0:
+    ingreso = input("ingrese su contraseña: ")
+    if ingreso == contraseña:
+        print("Bienvenido al cajero automatico")
+        break
+    else:
+        intentos -= 1
+        print (f"tu contraseña es incorrecta. Intentos restantes: {intentos}")
+    
+if intentos == 0:
+        print("Demasiados intentos fallidos. Tarjeta bloqueada.")
+        exit()
+        
+while True:
+    print("\nMENÙ PRINCIPAL")
+    print("1. Consultar saldo")
+    print("2. Depositar dinero")
+    print("3. Retirar dinero")
+    print("4. salir")
+    
+    opcion = input("Seleccione una opcion del (1-4): ")
+
+    if opcion == "1":
+        print(f"Su saldo actual es: {saldo}")
+
+    elif opcion == "2":
+        deposito = float(input("Ingrese la cantidad a depositar: "))
+        if deposito > 0:
+            saldo += deposito 
+            print(f"Deposito exitoso. Su nuevo saldo es: {saldo}")
+        else:
+            print("Cantidad de deposito invalida. Intente de nuevo.")
+            
+    elif opcion == "3":
+        retiro = float(input("Ingrese la cantidad a retirar: "))
+        if 0 < retiro <= saldo:
+            saldo -= retiro
+            print(f"Retiro exitoso. Su nuevo saldo es: {saldo}")
+        else:
+            print("Cantidad de retiro invalida o saldo insuficiente. Intente de nuevo.")
+    elif opcion == "4":
+        print("Gracias por usar el cajero automatico. ¡Hasta luego!")
+        break
+
+    else:
+        print("Opcion invalida. Por favor, seleccione una opcion del (1-4).")
